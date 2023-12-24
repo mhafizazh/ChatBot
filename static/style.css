@@ -204,6 +204,12 @@ border-radius: 0 0 15px 15px !important;
 	padding: 0;
 	margin: 0;
 }
+.typing-indicator {
+    color: #fffefe;
+    font-style: italic;
+    /* other styling as needed */
+}
+
 .action_menu ul li{
 	width: 100%;
 	padding: 10px 15px;

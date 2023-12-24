@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from transformers import AutoModelForCausalLM, AutoTokenizer
+import time
 
 import bot
 
@@ -15,6 +16,7 @@ def chat():
     msg = request.form["msg"]
     input = msg
     return get_Chat_response(input)
+
 
 
 def get_Chat_response(text, chat_history_ids=None):
