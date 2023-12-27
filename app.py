@@ -1,7 +1,4 @@
 from flask import Flask, render_template, request, jsonify
-from transformers import AutoModelForCausalLM, AutoTokenizer
-import time
-
 import bot
 
 app = Flask(__name__)
