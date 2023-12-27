@@ -61,6 +61,3 @@ def generate_response(message):
     return response
 
 
-message = "What experience Hafiz have in term of software engineering?"
-
-print(generate_response(message))
