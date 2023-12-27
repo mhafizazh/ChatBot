@@ -21,4 +21,4 @@ def get_Chat_response(text, chat_history_ids=None):
     return response
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=5000)
