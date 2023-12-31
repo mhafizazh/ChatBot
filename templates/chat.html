@@ -25,7 +25,7 @@
                         </div>
                     </div>
                     <div id="messageFormeight" class="card-body msg_card_body">
-                        <!-- Message display area will be here -->
+                        <!-- Initial message will be here -->
                     </div>
                     <div class="card-footer">
                         <!-- Typing indicator moved here -->
@@ -46,11 +46,20 @@
 
     <script>
         $(document).ready(function() {
+            // Append the initial message
+            const initialMessage = "Welcome to mhafizazh-GPT! How can I assist you today?";
+            const date = new Date();
+            const hour = date.getHours();
+            const minute = date.getMinutes();
+            const str_time = hour + ":" + minute;
+            const botHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="../static/mhafizazh.jpg" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">' + initialMessage + '<span class="msg_time">' + str_time + '</span></div></div>';
+            $("#messageFormeight").append($.parseHTML(botHtml));
+
             $("#messageArea").on("submit", function(event) {
                 const date = new Date();
                 const hour = date.getHours();
                 const minute = date.getMinutes();
-                const str_time = hour+":"+minute;
+                const str_time = hour + ":" + minute;
                 var rawText = $("#text").val();
 
                 var userHtml = '<div class="d-flex justify-content-end mb-4"><div class="msg_cotainer_send">' + rawText + '<span class="msg_time_send">'+ str_time + '</span></div><div class="img_cont_msg"></div></div>';
